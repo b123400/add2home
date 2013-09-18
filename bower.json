@@ -1,0 +1,22 @@
+{
+  "name": "add2home",
+  "version": "2.0.0",
+  "authors": [
+    "b123400 <b123400@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "http://b123400.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies":{
+    "dropzone":"3.7.1",
+    "jquery":"2.0.0"
+  }
+}

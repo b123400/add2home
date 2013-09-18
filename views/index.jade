@@ -1,0 +1,24 @@
+extends layout
+
+block script
+  script(src='/javascripts/uuid.js')
+  script(src='/javascripts/index.js')
+
+block content
+  h1 Add2home
+  p Create your customized webclip on iOS.
+
+  div#droparea.dropzone(action='/upload')
+    p.message Drop image or click here
+
+  form#url(action='/result' method='get')
+    input#url-uuid(type='hidden' name='uuid')
+
+    input#url-field(type='text' name='url' placeholder='URL')
+    br
+
+    div#submit-div
+      input#url-submit(type='submit' disabled=true)
+
+      p.image-error.hidden Please select an image first.
+      p.url-error.hidden Please enter a url.

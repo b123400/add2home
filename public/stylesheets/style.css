@@ -1,0 +1,119 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  display: block;
+  text-align: center;
+}
+
+h1,p{
+	text-align: center;
+}
+
+#droparea{
+	margin: 0 auto;
+	width: 500px;
+	max-width: 100%;
+	height: 500px;
+	border-color: #666666;
+	border-width: 10px;
+	border-style: dashed;
+	border-radius: 50px;
+	overflow: hidden;
+}
+
+#droparea.disable{
+	pointer-events:none;
+}
+
+#droparea .message{
+	width: 100%;
+	font-size: 40px;
+	text-align: center;
+	top: 50%;
+	position: relative;
+	margin-top: -30px;
+	pointer-events:none;
+}
+
+#droparea .dz-details{
+	width:400px;
+	height:400px;
+}
+
+#droparea .dz-details img{
+	width:400px;
+	height:400px;
+}
+
+#droparea .dz-image-preview{
+	margin: 0 auto;
+	margin-left: 10px;
+	margin-bottom: 200px;
+}
+
+.dz-default.dz-message{
+	display:none;
+}
+
+input { outline:none; }
+
+form#url{
+	text-align: center;
+}
+
+#url-field{
+	font-size: 40px;
+	border: 0;
+	background-color: #eee;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 500px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	max-width: 100%;
+	text-align: center;
+}
+
+#submit-div{
+	width: 500px;
+	margin: 0 auto;
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+
+#url-submit{
+	padding: 20px;
+	background-color: #44CC55;
+	border: 0;
+	width: 500px;
+	font-size: 40px;
+	max-width: 100%;
+	color: white;
+}
+
+#url-submit:hover{
+	background-color: #22aa33;
+}
+
+#url-submit:disabled{
+	background-color: #999999;
+	pointer-events:none;
+}
+
+.hidden{
+	display: none;
+}
+
+.image-error,.url-error{
+	background-color: #E75F5F;
+	color: white;
+	/*border-radius: 5px;*/
+	font-size: 20px;
+	width: 500px;
+	margin: 20px auto;
+	padding: 20px 0;
+}
