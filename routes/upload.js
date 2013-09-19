@@ -13,7 +13,6 @@ exports.upload = function(req, res){
     console.log('fuck upload');
     return;
   }
-  console.log(req.files.file);
   var mime = req.files.file.mime || req.files.file.headers['content-type'];
   if( mime.indexOf('image') == -1 ){
     res.json({
@@ -111,15 +110,22 @@ exports.result = function(req, res){
 
   var iosURL = "http://add2home.b123400.net/g?u="+req.query.uuid+"&url="+url;
 
+  var userAgent = req.headers['user-agent'];
+  var iOS = ( userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+  if( iOS ){
+    res.redirect(iosURL);
+    return;
+  }
+
   request('http://is.gd/create.php?format=simple&url='+encodeURIComponent(iosURL), function (error, response, body) {
     if (!error && response.statusCode == 200) {
       res.render("result",{
-        uuid : response.body
+        url : response.body
       });
     }else{
       console.log('is.gd error'+error,response);
       res.render("result",{
-        uuid : iosURL
+        url : iosURL
       });
     }
   });

@@ -69,6 +69,7 @@ form#url{
 	font-size: 40px;
 	border: 0;
 	background-color: #eee;
+	padding: 0;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	width: 500px;
@@ -114,6 +115,7 @@ form#url{
 	/*border-radius: 5px;*/
 	font-size: 20px;
 	width: 500px;
+	max-width: 100%;
 	margin: 20px auto;
 	padding: 20px 0;
 }
